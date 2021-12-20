@@ -1,13 +1,10 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class BooksRoute extends Route {
-  model() {
-    return [
-      { title: 'Monkey Adventure' },
-      { title: 'Island Strife' },
-      { title: 'The Ball' },
-      { title: 'Simple Pleasures of the South' },
-      { title: 'Big City Monkey' },
-    ];
+  @service store;
+  async model() {
+    const book = await this.store.findAll('book');
+    return book;
   }
 }
