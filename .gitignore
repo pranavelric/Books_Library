@@ -7,3 +7,22 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+
+
+### Ember ###
+/client/dist
+/client/tmp
+# dependencies
+/client/node_modules
+/client/bower_components
+# misc
+/client/.sass-cache
+/client/connect.lock
+/client/coverage/*
+/client/libpeerconnection.log
+/client/npm-debug.log
+/client/testem.log
+# ember-try
+/client/.node_modules.ember-try/
+/client/bower.json.ember-try
+/client/package.json.ember-try
